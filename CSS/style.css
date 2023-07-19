@@ -1,0 +1,171 @@
+a{
+    text-decoration: none;
+    color: inherit;    
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #0a0a0a;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header{
+    background-color: #ff9f1c;
+    padding: 15px 0 15px;
+    font-size: 24px;
+    line-height: 29px;
+    color: black;
+}
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+    /*justify-content: space-between;*/
+}
+
+.phone{
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: right;
+}
+
+.menu-item{
+    padding-right: 30px;
+    transition: all 0.6s;
+}
+
+.headline{
+    background-color: #ffbf69;
+    text-align: center;
+    padding: 30px 0 40px;
+}
+
+.title{
+    text-transform: uppercase;
+    margin-bottom: 0 0 40px;
+    color: #0a0a0a;
+    font-weight: 700;
+    font-style: 64px;
+    font-size: 40px;
+    line-height: 77px;
+}
+
+
+/*Положение первой фотки до нажатия кнопки*/
+.headeline-img{
+    margin-bottom: 0 0 25px;
+    padding: 0px 0px 20px;
+    transition: all .7s;
+}
+/*Положение фотки после нажатия кнопки*/
+.headeline-img.is-active {
+    transform: translateX(-500px);
+    /*transform: rotate(180);*/
+}
+
+.headeline-btn{
+    display: inline-block;
+    font-weight: 700;    
+    font-size: 25px;
+    font-style: 24px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #fff;
+    padding: 22px 117px 19px;
+    border-radius: 30px;
+    border: 5px solid #ed6742;
+    transition: background-color 0.6s;
+}
+/*При наведении меняет цвет ссылки*/
+.menu-item:hover{
+    color: #fff;
+    transform: scale(1.05, 1.05);
+}
+
+.div1 {
+    border: 1px solid black;
+    width: 600px;
+    height: 600px;
+    background: lightgreen;
+    display: none;
+}
+
+.headeline-btn:hover{
+    background-color: #ed6742;
+}
+
+.hardskills{
+    background-color: #ffffff;
+    text-align: center;
+    padding: 15px 0 40px;
+}
+
+.skills-png{
+    margin-bottom: 0 0 25px;
+}
+
+.skills-btn,
+.project-btn,
+.job-btn{
+    display: inline-block;
+    font-weight: 700;    
+    font-size: 25px;
+    font-style: 24px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #fff;
+    padding: 22px 117px 19px;
+    border-radius: 30px;
+    border: 5px solid #ed6742;
+    transition: background-color 0.6s;
+}
+
+.skills-btn:hover,
+.project-btn:hover,
+.job-btn:hover{
+    background-color: #ed6742;
+}
+
+.project{
+    background-color: #cbf3f0;
+    text-align: center;
+    padding: 15px 0 40px;
+}
+
+.job{
+    background-color: #2ec4b6;
+    text-align: center;
+    padding: 15px 0 40px;
+}
+
+.project-png{
+    margin-bottom: 0 0 25px;
+}
+
+.job-png{
+    margin-bottom: 0 0 25px;
+}
+
