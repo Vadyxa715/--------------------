@@ -35,24 +35,201 @@
     <main class="main">
         <section class="headline">
             <div class="container">
-                <h1 class="title">Образование</h1>
+                <h1 class="title" id="titleTit">Образование</h1>
+                <ul class="border" id="obrazBord">
+                    <li>НГТУ им Алексеева - ИТС - Эксплуатация машинных комплексов</li>
+                    <li>Профильные курсы "Java Rusch"</li>
+                    <li>Head First Java</li>
+                    <li>Грокаем алгоритмы</li>
+                    <li>Head First Паттерны проектирования</li>
+                </ul>
+                
+                <br>
                 <img class="headeline-img" id="obrazImg" src="images/Образование.png" width="600" height="350" alt="Образование">
                 <br>
                 <button class="headeline-btn" id="obrazBtn">Подробнее</button>
-                <div class="div1"></div>
                 <script>
                     const obrazBtn = document.querySelector('#obrazBtn')
-                    obrazBtn.addEventListener('click', _=>  obrazImg.classList.toggle('is-active'))
+                    /*const obrazTitle = document.querySelector('#titleTit')*/
+                    obrazBtn.addEventListener('click', _=>  {obrazImg.classList.toggle('is-active')
+                    /*titleTit.classList.toggle('is-active')*/
+                    obrazBord.classList.toggle('is-active')})
                 </script>
 
             </div>            
         </section>
         <section class="hardskills">
             <div class="container">
-                <h1 class="title">Навыки</h1>
-                <img class="skills-png" src="images/skillz.png" width="600" height="500" alt="Скилы">
+                <h1 class="title">Навыки</h1>                
+                <!--<div class="vl" id="vlv"></div>-->
+                <!--Вставка тул баров со скилами-->
+                <div class="skills_block" id="skBlock">
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill_name">Java (SE/EE)</div>
+                            <div class="skill_bar">
+                                <div class="skill_per" per="80">
+                                    <span class="value">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill_name">Spring Framework</div>
+                            <div class="skill_bar">
+                                <div class="skill_per" per="75">
+                                    <span class="value"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill_name">SQL</div>
+                            <div class="skill_bar">
+                                <div class="skill_per" per="75">
+                                    <span class="value"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill_name">HTML</div>
+                            <div class="skill_bar">
+                                <div class="skill_per" per="60">
+                                    <span class="value"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill_name">JavaScript</div>
+                            <div class="skill_bar">
+                                <div class="skill_per" per="45">
+                                    <span class="value">45%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill_name">CSS</div>
+                            <div class="skill_bar">
+                                <div class="skill_per" per="35">
+                                    <span class="value">35%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+                <style>
+                    /*Закончилась - начался стиль штоб не запутаться*/
+.skills_block{
+  margin: 0;
+  padding: 0;
+  height: 500px;/*высота*/
+  width: 300px;/*ширина*/
+  /*box-sizing: border-box;*/
+}
+.skills_block{
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
+  /*background-color: #ff5757;*/
+  /*display: flex;*/
+  display: grid;
+  /*justify-content: center;
+  align-items: center;*/
+  /*width: 100%;
+  min-height: 100vh;*/
+}
+.skills_block{
+  position: absolute;
+  /*width: 100%;*/
+  padding: 0 20px;
+  max-width: 300px;
+}
+.skills_block_title{
+  color: #000000;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 70px;
+}
+.skill_name{
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000000;
+  text-align:left;
+  margin: 20px 20px 20px;
+}
+.skill_bar{
+  height: 20px;
+  background-color: #eb8e28;
+  border-radius: 8px;  
+}
+.skill_per{
+  position: relative;
+  height: 20px;
+  background-color:#25b3c2;
+  border-radius: 8px;
+  width: 0;
+  transition: 2s linear;
+}
+.skill_per .value{
+  position: absolute;  
+  background-color: #c4b098;
+  padding: 4px 6px;  
+  font-size: 12px;
+  color: #000;
+  border-radius: 4px;
+  right: 0;
+  top: -35px;  
+  transform: translateX(100%);
+  opacity: 0; 
+  transition: 4s ease;
+}
+.skills_block{
+    transform: translateX(450px) translateY(0px);
+    opacity: 0;/*прозрачность - не видно*/
+    visibility: hidden;/*видимость - не видно - курсором не найдешь*/
+}
+.skills_block.is-active{
+    opacity: 1;/*прозрачность - видно*/
+    visibility: visible;/*видимость - видно*/
+    transition: all 3s;
+}
+                </style>
+                <!--Стиль закончился-->
+
+                <!--Скрипт честно взятый из тырнета-->
+                <script>
+                    $(function addBar(){
+                        $(".skill_per").each(function(){
+                            $this = $(this);
+                            var per = $(this).attr("per");
+                            $this.css("width", per + "%");
+                            $this.find(".value").text(per + "%").css("opacity", "1");                            
+                        });
+                    });
+                </script>
+                
+                <ul class="ski" id="skiBord">
+                    <li>Git</li>
+                    <li>OOP</li>
+                    <li>Maven</li>
+                    <li>REST</li>
+                    <li>JPA</li>
+                    <li>Postman</li>
+                    <li>JDBC</li>
+                </ul>
+
+                <img class="skills-png" id="skilP" src="images/skillz.png" width="600" height="500" alt="Скилы">
                 <br>
-                <a class="skills-btn" href="#">Подробнее</a>
+                <button class="skills-btn" id="skilBtn">Подробнее</button>
+                <!-- Основной скрипт для кнопки - двигает все туда сбда-->
+                <script>
+                    const skilBtn = document.querySelector('#skilBtn')                    
+                    skilBtn.addEventListener('click', _=>  {
+                        skilP.classList.toggle('is-active')                        
+                        skBlock.classList.toggle('is-active')
+                        skiBord.classList.toggle('is-active')
+                    })
+                </script>
 
             </div>
         </section>
@@ -60,8 +237,19 @@
             <div class="container">
                 <h1 class="title">Проекты</h1>
                 <img class="project-png" src="images/proect.png" width="600" height="600" alt="Проекты">
+                <img class="project-png1" id="pp1" src="images/proect_1.png" width="300" height="600" alt="Проекты">
+                <img class="project-png2" id="pp2" src="images/proect_2.png" width="300" height="600" alt="Проекты">
                 <br>
-                <a class="project-btn" href="#">Подробнее</a>
+                <button class="project-btn" id="proectBtn">Подробнее</button>                
+                <script>
+                    const proectBtn = document.querySelector('#proectBtn')
+                    /*const obrazTitle = document.querySelector('#titleTit')*/
+                    proectBtn.addEventListener('click', _=>  {
+                        pp1.classList.toggle('is-active')
+                        pp2.classList.toggle('is-active')
+                        /*obrazBord.classList.toggle('is-active')*/
+                    })
+                </script>
 
             </div>
         </section>
