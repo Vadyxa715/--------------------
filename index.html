@@ -233,9 +233,222 @@
 
             </div>
         </section>
+
+
+
         <section class="project">
             <div class="container">
                 <h1 class="title">Проекты</h1>
+
+                <!--вставка красивых кнопочек----------------------------------------------->
+
+                <div class="post-wrap" id="postW">
+                    <div class="post-item">
+                    <div class="item-content" id="ic1">
+                    <div class="item-icon group">
+                        <img src="images/springS.png" id="JavaSD" height="45" width="45" alt="Что-то">
+                    </div>
+                    <div class="item-body">
+                    <h3>Spring-shop</h3>
+                    <p>Приложение аналог совре- менного онлайн магазина.</p>
+                    </div>
+                    <div class="item-footer">
+                    <a href="https://github.com/Vadyxa715/spring-shop" class="link"><span>GitHub</span></a>
+                    </div>
+                    </div>
+                    </div>
+                    
+                    <div class="post-item">
+                    <div class="item-content" id="ic2">
+                    <div class="item-icon tree">
+                        <img src="images/webB.png" id="JavaSD" height="45" width="45" alt="Что-то">
+                    </div>
+                    <div class="item-body">
+                    <h3>Web blog</h3>
+                    <p>Онлайн платформа для обмена новостями</p>
+                    </div>
+                    <div class="item-footer">
+                    <a href="https://github.com/Vadyxa715/webblog" class="link"><span>GitHub</span></a>
+                    </div>
+                    </div>
+                    </div>
+                    
+                    
+                <!--</div>
+
+                    <div class="post-wrapp"></div>-->
+                        <div class="post-item">
+                        <div class="item-content" id="ic3">
+                        <div class="item-icon anchor">
+                            <img src="images/JavaSD.png" id="JavaSD" height="45" width="45" alt="Что-то">
+                        </div>
+                        <div class="item-body">
+                        <h3>Java School DigDes</h3>
+                        <p>Java EE проект созданный для распознавания SQL запроса</p>
+                        </div>
+                        <div class="item-footer">
+                        <a href="https://github.com/Vadyxa715/JavaSchoolDigDes" class="link"><span>GitHub</span></a>
+                        </div>
+                        </div>
+                        </div>
+                        
+                        <div class="post-item">
+                        <div class="item-content" id="ic4">
+                        <div class="item-icon video">
+                            <img src="images/OptimaW.png" id="JavaSD" height="45" width="45" alt="Что-то">
+                        </div>
+                        <div class="item-body">
+                        <h3>Optimal way</h3>
+                        <p>Посик оптимального пути в матрице с системой оценок</p>
+                        </div>
+                        <div class="item-footer">
+                        <a href="https://github.com/Vadyxa715/Test_optimal_way" class="link"><span>GitHub</span></a>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+
+
+                <!-- Стиль для них начало  ---------------------------------------------------->
+
+
+                <style>
+.post-item {
+    margin: 0;
+}
+.post-wrap{
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    display: inline-flexbox;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+
+    cursor: default;
+}
+.post-item {
+    padding: 15px;
+    /*cursor: pointer;*/
+}
+.post-item * {
+    transition: .3s linear;
+}
+.item-content {
+    background: #5b6996;
+    background: #6f7ea9;
+    padding: 40px;
+}
+.item-icon {
+    margin-bottom: 20px;
+}
+.item-icon:before {
+    content: "";
+    font-family: FontAwesome;
+    color: #fdebd5;
+    font-size: 50px;
+    line-height: 1;
+}
+.post-item:hover .item-icon,
+.post-item:hover .item-body h3, 
+.post-item:hover .item-body p{
+    transform: translateY(-8px);
+}
+.item-body {
+    color: #fdebd5;
+    font-size: 14px;
+}
+.item-body h3 {
+    font-weight: 500;
+    margin-bottom: 15px;
+    transition-delay: .05s;
+}
+.item-body p {
+    transition-delay: .1s;
+}
+.item-footer {
+    padding-top: 15px;
+}
+.link {
+    text-decoration: none;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    padding-right: 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #F5E2CD;
+}
+.link:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: .125rem;
+    margin: auto;
+    background: #F09EA3;
+    transform: scaleX(.2);
+    transform-origin: left center;
+    z-index: 0;
+    transition: .6s cubic-bezier(.6, .01, 0, 1);
+}
+.link span {
+    display: inline-block;
+    position: relative;
+    transform: translateX(-200%);
+    transition: .6s cubic-bezier(.6, .01, 0, 1);
+}
+.post-item:hover .link span {
+    transform: translateX(0%);
+}
+.post-item:hover .link:before {
+    transform-origin: right center;
+}
+@media (min-width: 768px) {
+.post-item {
+        flex-basis: 50%;
+        flex-shrink: 0;
+    }
+}
+@media (min-width: 960px) {
+    .post-item {
+        flex-basis: 33.333333333%;
+    }
+}
+#ic1{
+    border-radius: 100px 0 0 0;
+}
+#ic2{
+    border-radius:  0 100px 0 0;
+}
+#ic4{
+    border-radius:  0 0 100px 0;
+}
+#ic3{
+    border-radius:  0 0 0 100px;
+}
+#postW{
+    opacity: 0;
+    visibility: hidden;
+    transition: all .8s;
+}
+#postW.is-active{
+    opacity: 1;
+    visibility: visible;
+}
+                </style>
+
+                <!-- Стиль для кнопок конец ------------------------------------------------------>
+
+                <!--Конец вставки красивых кнопочек-------------------------------------------->
+
                 <img class="project-png" src="images/proect.png" width="600" height="600" alt="Проекты">
                 <img class="project-png1" id="pp1" src="images/proect_1.png" width="300" height="600" alt="Проекты">
                 <img class="project-png2" id="pp2" src="images/proect_2.png" width="300" height="600" alt="Проекты">
@@ -247,7 +460,7 @@
                     proectBtn.addEventListener('click', _=>  {
                         pp1.classList.toggle('is-active')
                         pp2.classList.toggle('is-active')
-                        /*obrazBord.classList.toggle('is-active')*/
+                        postW.classList.toggle('is-active')
                     })
                 </script>
 
