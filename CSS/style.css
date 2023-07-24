@@ -30,6 +30,7 @@ ul{
     margin: 0 auto;
     padding: 0 15px;
     position: relative;
+    /*overflow-x: hidden;*/
 }
 
 .nav{
@@ -95,6 +96,7 @@ ul{
 /*Положение фотки после нажатия кнопки*/
 .headeline-img.is-active {
     transform: translateX(-500px);
+    transform: translateX(-50vw);
     /*transform: rotate(180);*/
 }
 
@@ -128,6 +130,7 @@ ul{
     position: absolute;
     top: 200px;
     right: 50px;
+    right: 10%;
     transition: all .7s;
     opacity: 0;/*прозрачность - не видно*/
     visibility: hidden;/*видимость - не видно - курсором не найдешь*/
@@ -193,9 +196,15 @@ transition: 0.3s all linear;
 }
 /*движение картинки навыки вправо
 после нажатия кнопки*/
-#skilP.is-active{
+/* #skilP.is-active{
     transform: translateX(500px);
+} */
+#skilP.is-active{
+    transform: translateX(50vw);
 }
+/* #skilP.is-active{
+    transform: translateX(200%);
+} */
 
 .skills-btn,
 .project-btn,
@@ -253,10 +262,12 @@ transition: 0.3s all linear;
 
 #pp1.is-active{
     transform: translateX(-500px);
+    transform: translateX(-35vw);
 }
 
 #pp2.is-active{
     transform: translateX(500px);
+    transform: translateX(35vw);
 }
 
 .job-png{
@@ -270,8 +281,11 @@ transition: 0.3s all linear;
     padding: 0 0 0;
     position: absolute;
     top: 160px;
+    top: 22%;
     right: 1150px;
-    transition: all .7s;
+    left: 13%;
+    right: 87%;
+    transition: all .8s;
 }
 
 #skiBord{
