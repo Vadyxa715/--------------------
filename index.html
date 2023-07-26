@@ -1,602 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/normalize.css">
-    <link rel="stylesheet" href="CSS/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
     <title>Vadim Kurdin</title>
-</head>
-<body>
+  </head>
+  <body>
+
+
     <header class="header" id="myHeader">
-        <div class="container">
-            <nav class="nav">
-                <ul class="menu">
-                    <li class="menu-itemm">
-                        <a class="menu-link" >Курдин Вадим начинающий Java backend developer</a>
-                    </li>
+      <div class="container">
+        <nav class="nav">
+          <ul class="menu">
+            <li class="menu-itemm">
+              <a class="menu-link"
+                >Курдин Вадим начинающий Java backend developer</a
+              >
+            </li>
+          </ul>
 
-                    <!-- <li class="menu-item">
-                        <a class="menu-link" href="aboutMe.html">Контакты</a>
-                    </li>
-
-                    <li class="menu-item">
-                        <a class="menu-link" href="feedback.html">Обратная связь</a>
-                    </li> -->
-                </ul>
-
-                <a class="logo" id="logo">
-                    <img class="logo-img" src="images/VK-logo.png" width="60" height="51" alt="Логотип сайта">
-                </a>
-                <style>
-                    .logo-img{
-                        transform: translateX(-2vw);
-                    }
-                </style>
-
-                <!-- <a href="tel:79991417266" class="phone">+7 999-141-72-66</a> -->
-            </nav>
-        </div>
+          <a class="logo" id="logo">
+            <img
+              class="logo-img"
+              id="logoImg"
+              src="images/VK-logo.png"
+              width="60"
+              height="51"
+              alt="Логотип сайта"
+            />
+          </a>
+        </nav>
+      </div>
     </header>
+
+
     <main class="main">
-        <section class="headline">
-            <div class="container">
-                <h1 class="title" id="titleTit">Образование</h1>
-                <ul class="border" id="obrazBord">
-                    <li>НГТУ им Алексеева - ИТС - Эксплуатация машинных комплексов</li>
-                    <li>Профильные курсы "Java Rusch"</li>
-                    <li>Head First Java</li>
-                    <li>Грокаем алгоритмы</li>
-                    <li>Head First Паттерны проектирования</li>
-                </ul>
-                
-                <br>
-                <img class="headeline-img" id="obrazImg" src="images/Образование.png" width="600" height="350" alt="Образование">
-                
-                <br>
-                <button class="headeline-btn" id="obrazBtn">Подробнее</button>
-                <script>
-                    const obrazBtn = document.querySelector('#obrazBtn')
-                    /*const obrazTitle = document.querySelector('#titleTit')*/
-                    obrazBtn.addEventListener('click', _=>  {obrazImg.classList.toggle('is-active')
-                    /*titleTit.classList.toggle('is-active')*/
-                    obrazBord.classList.toggle('is-active')})
-                </script>
-
-            </div>            
-        </section>
-        <section class="hardskills">
-            <div class="container">
-                <h1 class="title">Навыки</h1>                
-                <!--Вставка тул баров со скилами-->
-                <div class="skills_block" id="skBlock">
-                    <div class="skills">
-                        <div class="skill">
-                            <div class="skill_name">Java (SE/EE)</div>
-                            <div class="skill_bar">
-                                <div class="skill_per" per="80">
-                                    <span class="value">90%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill_name">Spring Framework</div>
-                            <div class="skill_bar">
-                                <div class="skill_per" per="75">
-                                    <span class="value"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill_name">SQL</div>
-                            <div class="skill_bar">
-                                <div class="skill_per" per="75">
-                                    <span class="value"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill_name">HTML</div>
-                            <div class="skill_bar">
-                                <div class="skill_per" per="60">
-                                    <span class="value"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill_name">JavaScript</div>
-                            <div class="skill_bar">
-                                <div class="skill_per" per="45">
-                                    <span class="value">45%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill_name">CSS</div>
-                            <div class="skill_bar">
-                                <div class="skill_per" per="35">
-                                    <span class="value">35%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-                <style>
-                    /*Закончилась - начался стиль штоб не запутаться*/
-.skills_block{
-  margin: 0;
-  padding: 0;
-  height: 500px;/*высота*/
-  width: 300px;/*ширина*/
-  /*box-sizing: border-box;*/
-}
-.skills_block{
-  position: absolute;
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Inter', sans-serif;
-  /*background-color: #ff5757;*/
-  /*display: flex;*/
-   /*display: grid; */
-  /*justify-content: center;
-  align-items: center;*/
-  /*width: 100%;
-  min-height: 100vh;*/
-}
-.skills_block{
-  position: absolute;
-  /*position: fixed;*/
-  
-  left: 40%;
-  right: 60%;
-  
-  
-  /*width: 100%;*/
-  /* padding: 0 20px;
-  max-width: 300px; */
-}
-.skills_block_title{
-  color: #000000;
-  font-size: 32px;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 70px;
-}
-.skill_name{
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #000000;
-  text-align:left;
-  margin: 20px 20px 20px;
-}
-.skill_bar{
-  height: 20px;
-  background-color: #eb8e28;
-  border-radius: 8px;  
-}
-.skill_per{
-  position: relative;
-  height: 20px;
-  background-color:#25b3c2;
-  border-radius: 8px;
-  width: 0;
-  transition: 2s linear;
-}
-.skill_per .value{
-  position: absolute;  
-  background-color: #c4b098;
-  padding: 4px 6px;  
-  font-size: 12px;
-  color: #000;
-  border-radius: 4px;
-  right: 0;
-  top: -35px;  
-  transform: translateX(100%);
-  opacity: 0; 
-  transition: 4s ease;
-}
-.skills_block{
-    /*Передвижение по умолчанию*/
-    /*transform: translateX(450px) translateY(0px);*/
-    /*transform: translate(-50%, -50%);*/
-
-   
-
-    opacity: 0;/*прозрачность - не видно*/
-    visibility: hidden;/*видимость - не видно - курсором не найдешь*/
-}
-.skills_block.is-active{
-    opacity: 1;/*прозрачность - видно*/
-    visibility: visible;/*видимость - видно*/
-    transition: all 3s;
-}
-                </style>
-                <!--Стиль закончился-->
-
-                <!--Скрипт честно взятый из тырнета-->
-                <script>
-                    $(function addBar(){
-                        $(".skill_per").each(function(){
-                            $this = $(this);
-                            var per = $(this).attr("per");
-                            $this.css("width", per + "%");
-                            $this.find(".value").text(per + "%").css("opacity", "1");                            
-                        });
-                    });
-                </script>
-                
-                <ul class="ski" id="skiBord">
-                    <li>Git</li>
-                    <li>OOP</li>
-                    <li>Maven</li>
-                    <li>REST</li>
-                    <li>JPA</li>
-                    <li>Postman</li>
-                    <li>JDBC</li>
-                </ul>
-
-                <img class="skills-png" id="skilP" src="images/skillz.png" width="600" height="500" alt="Скилы">
-                <br>
-                <button class="skills-btn" id="skilBtn">Подробнее</button>
-                <!-- Основной скрипт для кнопки - двигает все туда сбда-->
-                <script>
-                    const skilBtn = document.querySelector('#skilBtn')                    
-                    skilBtn.addEventListener('click', _=>  {
-                        skilP.classList.toggle('is-active')                        
-                        skBlock.classList.toggle('is-active')
-                        skiBord.classList.toggle('is-active')
-                    })
-                </script>
-
-            </div>
-        </section>
 
 
+      <section class="headline" id="headelineObr">
+        <div class="container" id="containerObr">
+          <h1 class="title" id="titleTit">Образование</h1>
+          <ul class="border" id="obrazBord">
+            <li>НГТУ им Алексеева - ИТС - Эксплуатация машинных комплексов</li>
+            <li>Профильные курсы "Java Rusch"</li>
+            <li>Head First Java</li>
+            <li>Грокаем алгоритмы</li>
+            <li>Head First Паттерны проектирования</li>
+          </ul>
 
-        <section class="project">
-            <div class="container">
-                <h1 class="title">Проекты</h1>
+          <br />
+          <img
+            class="headeline-img"
+            id="obrazImg"
+            src="images/Образование.png"
+            width="600"
+            height="350"
+            alt="Образование"
+          />
 
-                <!--вставка красивых кнопочек----------------------------------------------->
-
-                <div class="post-wrap" id="postW">
-                    <div class="post-item">
-                    <div class="item-content" id="ic1">
-                    <div class="item-icon group">
-                        <img src="images/springS.png" id="JavaSD" height="45" width="45" alt="Что-то">
-                    </div>
-                    <div class="item-body">
-                    <h3>Spring-shop</h3>
-                    <p>Приложение аналог совре- менного онлайн магазина.</p>
-                    </div>
-                    <div class="item-footer">
-                    <a href="https://github.com/Vadyxa715/spring-shop" class="link"><span>GitHub</span></a>
-                    </div>
-                    </div>
-                    </div>
-                    
-                    <div class="post-item">
-                    <div class="item-content" id="ic2">
-                    <div class="item-icon tree">
-                        <img src="images/webB.png" id="JavaSD" height="45" width="45" alt="Что-то">
-                    </div>
-                    <div class="item-body">
-                    <h3>Web blog</h3>
-                    <p>Онлайн платформа для обмена новостями</p>
-                    </div>
-                    <div class="item-footer">
-                    <a href="https://github.com/Vadyxa715/webblog" class="link"><span>GitHub</span></a>
-                    </div>
-                    </div>
-                    </div>
-                    
-                    
-                <!--</div>
-
-                    <div class="post-wrapp"></div>-->
-                        <div class="post-item">
-                        <div class="item-content" id="ic3">
-                        <div class="item-icon anchor">
-                            <img src="images/JavaSD.png" id="JavaSD" height="45" width="45" alt="Что-то">
-                        </div>
-                        <div class="item-body">
-                        <h3>Java School DigDes</h3>
-                        <p>Java EE проект созданный для распознавания SQL запроса</p>
-                        </div>
-                        <div class="item-footer">
-                        <a href="https://github.com/Vadyxa715/JavaSchoolDigDes" class="link"><span>GitHub</span></a>
-                        </div>
-                        </div>
-                        </div>
-                        
-                        <div class="post-item">
-                        <div class="item-content" id="ic4">
-                        <div class="item-icon video">
-                            <img src="images/OptimaW.png" id="JavaSD" height="45" width="45" alt="Что-то">
-                        </div>
-                        <div class="item-body">
-                        <h3>Optimal way</h3>
-                        <p>Посик оптимального пути в матрице с системой оценок</p>
-                        </div>
-                        <div class="item-footer">
-                        <a href="https://github.com/Vadyxa715/Test_optimal_way" class="link"><span>GitHub</span></a>
-                        </div>
-                        </div>
-                        </div>
-                    </div>
-
-
-                <!-- Стиль для них начало  ---------------------------------------------------->
-
-
-                <style>
-.post-item {
-    margin: 0;
-}
-.post-wrap{
-    max-width: 950px;
-    margin: 0 auto;
-    display: flex;
-    display: inline-flexbox;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    overflow: auto;
-
-    cursor: default;
-}
-.post-item {
-    padding: 15px;
-    /*cursor: pointer;*/
-}
-.post-item * {
-    transition: .3s linear;
-}
-.item-content {
-    background: #5b6996;
-    background: #6f7ea9;
-    padding: 40px;
-}
-.item-icon {
-    margin-bottom: 20px;
-}
-.item-icon:before {
-    content: "";
-    font-family: FontAwesome;
-    color: #fdebd5;
-    font-size: 50px;
-    line-height: 1;
-}
-.post-item:hover .item-icon,
-.post-item:hover .item-body h3, 
-.post-item:hover .item-body p{
-    transform: translateY(-8px);
-}
-.item-body {
-    color: #fdebd5;
-    font-size: 14px;
-}
-.item-body h3 {
-    font-weight: 500;
-    margin-bottom: 15px;
-    transition-delay: .05s;
-}
-.item-body p {
-    transition-delay: .1s;
-}
-.item-footer {
-    padding-top: 15px;
-}
-.link {
-    text-decoration: none;
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    padding-right: 30px;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #F5E2CD;
-}
-.link:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    bottom: 0;
-    height: .125rem;
-    margin: auto;
-    background: #F09EA3;
-    transform: scaleX(.2);
-    transform-origin: left center;
-    z-index: 0;
-    transition: .6s cubic-bezier(.6, .01, 0, 1);
-}
-.link span {
-    display: inline-block;
-    position: relative;
-    transform: translateX(-200%);
-    transition: .6s cubic-bezier(.6, .01, 0, 1);
-}
-.post-item:hover .link span {
-    transform: translateX(0%);
-}
-.post-item:hover .link:before {
-    transform-origin: right center;
-}
-@media (min-width: 768px) {
-.post-item {
-        flex-basis: 50%;
-        flex-shrink: 0;
-    }
-}
-@media (min-width: 960px) {
-    .post-item {
-        flex-basis: 33.333333333%;
-    }
-}
-#ic1{
-    border-radius: 100px 0 0 0;
-}
-#ic2{
-    border-radius:  0 100px 0 0;
-}
-#ic4{
-    border-radius:  0 0 100px 0;
-}
-#ic3{
-    border-radius:  0 0 0 100px;
-}
-#postW{
-    opacity: 0;
-    visibility: hidden;
-    transition: all .8s;
-}
-#postW.is-active{
-    opacity: 1;
-    visibility: visible;
-}
-                </style>
-
-                <!-- Стиль для кнопок конец ------------------------------------------------------>
-
-                <!--Конец вставки красивых кнопочек-------------------------------------------->
-
-                <img class="project-png" src="images/proect.png" width="600" height="600" alt="Проекты">
-                <img class="project-png1" id="pp1" src="images/proect_1.png" width="300" height="600" alt="Проекты">
-                <img class="project-png2" id="pp2" src="images/proect_2.png" width="300" height="600" alt="Проекты">
-                <br>
-                <button class="project-btn" id="proectBtn">Подробнее</button>                
-                <script>
-                    const proectBtn = document.querySelector('#proectBtn')
-                    /*const obrazTitle = document.querySelector('#titleTit')*/
-                    proectBtn.addEventListener('click', _=>  {
-                        pp1.classList.toggle('is-active')
-                        pp2.classList.toggle('is-active')
-                        postW.classList.toggle('is-active')
-                    })
-                </script>
-
-            </div>
-        </section>
-        <section class="job">
-            <div class="container">
-                <h1 class="title">Опыт работы</h1>
-                <img class="job-png" src="images/jobb.png" id="jobPng" width="600" height="370" alt="Опыт работы">
-                <br>
-                <div class="one"><h1 id="opit">БЕЗ ОПЫТА КОММЕРЧЕСКОЙ РАЗРАБОТКИ</h1></div>
-                <style>
-                .one {
-                    /* background: #FFF4ED;*/
-                    /*background: #5f767e; */
-                    /* padding: 50px 20px; */
-                    text-align: center;
-                }
-.one h1 {
-font-family: 'Merriweather', serif;
-position: relative;
-position: absolute;
-max-width: 500px;
-left: 27%;
-right: 27%;
-
-opacity: 0;
-    visibility: hidden;
-    transition: all 0.8s;
-
-color: #3CA1D9;
-color:#5f767e;
-/* display: inline-block; */
-  border-top: 2px solid;
-  border-bottom: 2px solid;
-  font-size: 3em;
-  padding: 11px 60px;
-  margin: auto;
-  top: 40%; 
-  line-height: 1;
-}
-
-#opit.is-active{
-    opacity: 1;
-    visibility: visible;
-}
-
-
-.one h1:before, .one h1:after {
-  content: ""; 
-  position: absolute;
-  top: 0;
-  width: 30px;
-  height: 100%;
- 
-  border-left: 2px solid;
-  border-right: 2px solid;
-  background: repeating-linear-gradient(180deg, transparent, transparent 2px, #5f767e 2px, #5f767e 4px);
-}
-.one h1:before {left: 0;}
-.one h1:after {right: 0;}
-@media (max-width: 420px) {
-  .one h1 {font-size: 2em;}
-}
-                </style>
-                <button class="job-btn" id="jobBtn">Подробнее</button>
-                <script>
-                    const jobBtn = document.querySelector('#jobBtn')                    
-                    jobBtn.addEventListener('click', _=>  {
-                        jobPng.classList.toggle('is-active')                        
-                        opit.classList.toggle('is-active')
-                        
-                    })
-                </script>
-
-            </div>
-        </section>
-    </main>
-    <!-- красивые иконки отсюда -->    
-    <header class="header" id="myNizHeader">
-        <div class="container" id="myContainer">
-            <nav class="nav" id="muNav">
-                <ul class="menu" id="myMenu">
-                    <li class="menu-item" id="menuItem">                        
-                        <a class="menu-link" href="mailto:vadim_kurdin@mail.ru" target="_blank">
-                            <img src="images/adress.png" alt="" class="adress" width="40" height="40">
-                        </a>
-                    </li>
-                    <li class="menu-item">                        
-                        <a class="menu-link" href="https://t.me/Vadyxa715" target="_blank">
-                            <img src="images/telegram.png" alt="" class="telegram" width="40" height="40">
-                        </a>
-                    </li>
-                    <li class="menu-item">                        
-                        <a class="menu-link" href="https://vk.com/vadim_kurdin" target="_blank">
-                            <img src="images/vk.png" alt="" class="vk" width="40" height="40">
-                        </a>
-                    </li>
-                    <li class="menu-item">                        
-                        <a class="menu-link" href="tel:+79991417266" target="_blank">
-                            <img src="images/phone.png" alt="" class="phone" width="40" height="40">
-                        </a>
-                    </li>
-                    <li class="menu-item">                        
-                        <a class="menu-link" href="https://join.skype.com/invite/IBwMIOFfUpC2" target="_blank">
-                            <img src="images/skype.png" alt="" class="skype" width="40" height="40">
-                        </a>
-                    </li>
-                    <li class="menu-item">                        
-                        <a class="menu-link" href="https://github.com/Vadyxa715?tab=repositories" target="_blank">
-                            <img src="images/github.png" alt="" class="github" width="40" height="40">
-                        </a>
-                    </li>                    
-                </ul>
-            </nav>
+          <br />
+          <button class="headeline-btn" id="obrazBtn">Подробнее</button>
+          <script>
+            const obrazBtn = document.querySelector("#obrazBtn");
+            obrazBtn.addEventListener("click", (_) => {
+              obrazImg.classList.toggle("is-active");
+              obrazBord.classList.toggle("is-active");
+            });
+          </script>
         </div>
-    </header>    
-</body>
+      </section>
+
+
+      <section class="hardskills">
+        <div class="container">
+          <h1 class="title">Навыки</h1>          
+          <div class="skills_block" id="skBlock">
+            <div class="skills">
+              <div class="skill">
+                <div class="skill_name">Java (SE/EE)</div>
+                <div class="skill_bar">
+                  <div class="skill_per" per="80">
+                    <span class="value">90%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill_name">Spring Framework</div>
+                <div class="skill_bar">
+                  <div class="skill_per" per="75">
+                    <span class="value"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill_name">SQL</div>
+                <div class="skill_bar">
+                  <div class="skill_per" per="75">
+                    <span class="value"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill_name">HTML</div>
+                <div class="skill_bar">
+                  <div class="skill_per" per="60">
+                    <span class="value"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill_name">JavaScript</div>
+                <div class="skill_bar">
+                  <div class="skill_per" per="45">
+                    <span class="value">45%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill_name">CSS</div>
+                <div class="skill_bar">
+                  <div class="skill_per" per="35">
+                    <span class="value">35%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"
+          ></script>
+          <script>
+            $(function addBar() {
+              $(".skill_per").each(function () {
+                $this = $(this);
+                var per = $(this).attr("per");
+                $this.css("width", per + "%");
+                $this
+                  .find(".value")
+                  .text(per + "%")
+                  .css("opacity", "1");
+              });
+            });
+          </script>
+
+          <ul class="ski" id="skiBord">
+            <li>Git</li>
+            <li>OOP</li>
+            <li>Maven</li>
+            <li>REST</li>
+            <li>JPA</li>
+            <li>Postman</li>
+            <li>JDBC</li>
+          </ul>
+
+          <img
+            class="skills-png"
+            id="skilP"
+            src="images/skillz.png"
+            width="600"
+            height="500"
+            alt="Скилы"
+          />
+          <br />
+          <button class="skills-btn" id="skilBtn">Подробнее</button>
+          <script>
+            const skilBtn = document.querySelector("#skilBtn");
+            skilBtn.addEventListener("click", (_) => {
+              skilP.classList.toggle("is-active");
+              skBlock.classList.toggle("is-active");
+              skiBord.classList.toggle("is-active");
+            });
+          </script>
+        </div>
+      </section>
+
+
+      <!-- <section class="project">
+        <div class="container">
+          <h1 class="title">Проекты</h1>
+          <div class="post-wrap" id="postW">
+            <div class="post-item">
+              <div class="item-content" id="ic1">
+                <div class="item-icon group">
+                  <img
+                    src="images/springS.png"
+                    id="JavaSD"
+                    height="45"
+                    width="45"
+                    alt="Что-то"
+                  />
+                </div>
+                <div class="item-body">
+                  <h3>Spring-shop</h3>
+                  <p>Приложение аналог совре- менного онлайн магазина.</p>
+                </div>
+                <div class="item-footer">
+                  <a
+                    href="https://github.com/Vadyxa715/spring-shop"
+                    class="link"
+                    ><span>GitHub</span></a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="post-item">
+              <div class="item-content" id="ic2">
+                <div class="item-icon tree">
+                  <img
+                    src="images/webB.png"
+                    id="JavaSD"
+                    height="45"
+                    width="45"
+                    alt="Что-то"
+                  />
+                </div>
+                <div class="item-body">
+                  <h3>Web blog</h3>
+                  <p>Онлайн платформа для обмена новостями</p>
+                </div>
+                <div class="item-footer">
+                  <a href="https://github.com/Vadyxa715/webblog" class="link"
+                    ><span>GitHub</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="post-item">
+              <div class="item-content" id="ic3">
+                <div class="item-icon anchor">
+                  <img
+                    src="images/JavaSD.png"
+                    id="JavaSD"
+                    height="45"
+                    width="45"
+                    alt="Что-то"
+                  />
+                </div>
+                <div class="item-body">
+                  <h3>Java School DigDes</h3>
+                  <p>Java EE проект созданный для распознавания SQL запроса</p>
+                </div>
+                <div class="item-footer">
+                  <a
+                    href="https://github.com/Vadyxa715/JavaSchoolDigDes"
+                    class="link"
+                    ><span>GitHub</span></a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="post-item">
+              <div class="item-content" id="ic4">
+                <div class="item-icon video">
+                  <img
+                    src="images/OptimaW.png"
+                    id="JavaSD"
+                    height="45"
+                    width="45"
+                    alt="Что-то"
+                  />
+                </div>
+                <div class="item-body">
+                  <h3>Optimal way</h3>
+                  <p>Посик оптимального пути в матрице с системой оценок</p>
+                </div>
+                <div class="item-footer">
+                  <a
+                    href="https://github.com/Vadyxa715/Test_optimal_way"
+                    class="link"
+                    ><span>GitHub</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            class="project-png"
+            src="images/proect.png"
+            width="600"
+            height="600"
+            alt="Проекты"
+          />
+          <img
+            class="project-png1"
+            id="pp1"
+            src="images/proect_1.png"
+            width="300"
+            height="600"
+            alt="Проекты"
+          />
+          <img
+            class="project-png2"
+            id="pp2"
+            src="images/proect_2.png"
+            width="300"
+            height="600"
+            alt="Проекты"
+          />
+          <br />
+          <button class="project-btn" id="proectBtn">Подробнее</button>
+          <script>
+            const proectBtn = document.querySelector("#proectBtn");
+            proectBtn.addEventListener("click", (_) => {
+              pp1.classList.toggle("is-active");
+              pp2.classList.toggle("is-active");
+              postW.classList.toggle("is-active");
+            });
+          </script>
+        </div>
+      </section> -->
+
+
+      <!-- <section class="job">
+        <div class="container">
+          <h1 class="title">Опыт работы</h1>
+          <img
+            class="job-png"
+            src="images/jobb.png"
+            id="jobPng"
+            width="600"
+            height="370"
+            alt="Опыт работы"
+          />
+          <br />
+          <div class="one">
+            <h1 id="opit">БЕЗ ОПЫТА КОММЕРЧЕСКОЙ РАЗРАБОТКИ</h1>
+          </div>
+          <button class="job-btn" id="jobBtn">Подробнее</button>
+          <script>
+            const jobBtn = document.querySelector("#jobBtn");
+            jobBtn.addEventListener("click", (_) => {
+              jobPng.classList.toggle("is-active");
+              opit.classList.toggle("is-active");
+            });
+          </script>
+        </div>
+      </section> -->
+
+
+    </main>
+
+
+    <header class="header" id="myNizHeader">
+      <div class="container" id="myContainer">
+        <nav class="nav" id="muNav">
+          <ul class="menu" id="myMenu">
+            <li class="menu-item" id="menuItem">
+              <a
+                class="menu-link"
+                href="mailto:vadim_kurdin@mail.ru"
+                target="_blank"
+              >
+                <img
+                  src="images/adress.png"
+                  id="adressPNG"
+                  alt=""
+                  class="adress"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                class="menu-link"
+                href="https://t.me/Vadyxa715"
+                target="_blank"
+              >
+                <img
+                  src="images/telegram.png"
+                  id="telegramPNG"
+                  alt=""
+                  class="telegram"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                class="menu-link"
+                href="https://vk.com/vadim_kurdin"
+                target="_blank"
+              >
+                <img
+                  src="images/vk.png"
+                  id="vkPNG"
+                  alt=""
+                  class="vk"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="tel:+79991417266" target="_blank">
+                <img
+                  src="images/phone.png"
+                  id="phonePNG"
+                  alt=""
+                  class="phone"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                class="menu-link"
+                href="https://join.skype.com/invite/IBwMIOFfUpC2"
+                target="_blank"
+              >
+                <img
+                  src="images/skype.png"
+                  id="skypePNG"
+                  alt=""
+                  class="skype"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                class="menu-link"
+                href="https://github.com/Vadyxa715?tab=repositories"
+                target="_blank"
+              >
+                <img
+                  src="images/github.png"
+                  id="githubPNG"
+                  alt=""
+                  class="github"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+  </body>
 </html>
