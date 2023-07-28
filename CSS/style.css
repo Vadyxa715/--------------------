@@ -700,6 +700,11 @@ ul {
     width: 80vw;
     height: 65vw;
   }
+   #skilP.is-active{
+    transform: translateX(50vw);
+    opacity: 0;
+    visibility: hidden;
+}
 
   .headeline-img.is-active,
   .skills-png.is-active,
